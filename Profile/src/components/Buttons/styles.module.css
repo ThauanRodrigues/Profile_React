@@ -1,0 +1,35 @@
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.links a {
+  background: rgb(66, 140, 209);
+  background: linear-gradient(
+    45deg,
+    rgb(30, 112, 189) 10%,
+    rgb(124, 212, 235) 100%
+  );
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  padding: 0.625rem;
+  font-weight: 700;
+  position: relative;
+  bottom: 0;
+  text-decoration: none;
+  transition: 3s;
+  width: 15rem;
+}
+
+.links a:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  bottom: 0.25rem;
+}
+
+.links a .icons {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
