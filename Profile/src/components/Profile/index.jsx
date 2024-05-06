@@ -3,6 +3,7 @@ import Title from "../Title";
 import ProfileSection from "./ProfileSection";
 import styles from "./styles.module.css";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
+
 export default function Profile({
   avatar,
   name,
@@ -25,23 +26,26 @@ export default function Profile({
       <ProfileSection>{phone}</ProfileSection>
       <ProfileSection>{email}</ProfileSection>
 
-      <ProfileSection>
-        <div className={styles.links}>
-          <ButtonLinks href={githubUrl}>
-            <FaGithub className={styles.icons} />
-            GitHub
-          </ButtonLinks>
+      <ProfileSection
+        className={styles.links}
+        id="links-section"
+        data-test="some value"
+        aria-label="social links"
+      >
+        <ButtonLinks href={githubUrl}>
+          <FaGithub className={styles.icons} />
+          GitHub
+        </ButtonLinks>
 
-          <ButtonLinks href={linkedinUrl}>
-            <FaLinkedin className={styles.icons} />
-            Linkedin
-          </ButtonLinks>
+        <ButtonLinks href={linkedinUrl}>
+          <FaLinkedin className={styles.icons} />
+          Linkedin
+        </ButtonLinks>
 
-          <ButtonLinks href={instaUrl}>
-            <FaInstagram className={styles.icons} />
-            Instagram
-          </ButtonLinks>
-        </div>
+        <ButtonLinks href={instaUrl}>
+          <FaInstagram className={styles.icons} />
+          Instagram
+        </ButtonLinks>
       </ProfileSection>
     </div>
   );

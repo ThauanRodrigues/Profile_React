@@ -1,7 +1,13 @@
 import styles from "./styles.module.css";
 
 const ProfileSection = (props) => (
-  <div className={styles.wrapper}>{props.children}</div>
+  <div
+    {...props}
+    className={`${styles.wrapper} 
+  ${props.className}`}
+  >
+    {props.children}
+  </div>
 );
 
 export default ProfileSection;
