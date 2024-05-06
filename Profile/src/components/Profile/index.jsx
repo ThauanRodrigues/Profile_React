@@ -1,5 +1,8 @@
-import Button from "../Buttons";
+import ButtonLinks from "../ButtonLinks";
+import Title from "../Title";
+import ProfileSection from "./ProfileSection";
 import styles from "./styles.module.css";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
 export default function Profile({
   avatar,
   name,
@@ -13,15 +16,33 @@ export default function Profile({
   return (
     <div className={styles.container}>
       <img className={styles.avatar} src={avatar} alt={name} />
-      <h2 className={styles.name}>{name}</h2>
-      <div>{bio}</div>
-      <div>{phone}</div>
-      <div>{email}</div>
-      <Button
-        githubUrl={githubUrl}
-        linkedinUrl={linkedinUrl}
-        instaUrl={instaUrl}
-      />
+
+      <Title>
+        <span>{name}</span>
+      </Title>
+
+      <ProfileSection>{bio}</ProfileSection>
+      <ProfileSection>{phone}</ProfileSection>
+      <ProfileSection>{email}</ProfileSection>
+
+      <ProfileSection>
+        <div className={styles.links}>
+          <ButtonLinks href={githubUrl}>
+            <FaGithub className={styles.icons} />
+            GitHub
+          </ButtonLinks>
+
+          <ButtonLinks href={linkedinUrl}>
+            <FaLinkedin className={styles.icons} />
+            Linkedin
+          </ButtonLinks>
+
+          <ButtonLinks href={instaUrl}>
+            <FaInstagram className={styles.icons} />
+            Instagram
+          </ButtonLinks>
+        </div>
+      </ProfileSection>
     </div>
   );
 }

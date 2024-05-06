@@ -14,13 +14,16 @@
   margin: 2rem 0 1rem;
 }
 
-.name {
-  margin: 1rem;
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
 
-.container div {
-  border-top: 1px solid rgb(66, 140, 209);
-  padding: 1rem 2.5rem;
+.icons {
+  margin-right: 1rem;
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 420px) {
