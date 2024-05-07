@@ -4,6 +4,11 @@ import ProfileSection from "./ProfileSection";
 import styles from "./styles.module.css";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
 
+function handleClick(ev) {
+  console.log(ev);
+  alert("Você agora está seguindo!");
+}
+
 export default function Profile({
   avatar,
   name,
@@ -16,6 +21,12 @@ export default function Profile({
 }) {
   return (
     <div className={styles.container}>
+      <div className={styles.buttonFollowHeader}>
+        <button className={styles.followButton} onClick={handleClick}>
+          Seguir
+        </button>
+      </div>
+
       <img className={styles.avatar} src={avatar} alt={name} />
 
       <Title>

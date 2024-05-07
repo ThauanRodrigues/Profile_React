@@ -2,9 +2,26 @@
   background-color: #fff;
   border-radius: 1rem;
   width: 25rem;
-  height: 40rem;
+  height: fit-content;
   text-align: center;
   box-shadow: 4px 4px 16px -8px rgba(0, 0, 0, 0.25);
+}
+.buttonFollowHeader {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.followButton {
+  margin: 1rem 1rem 0 0;
+  padding: 0.5rem;
+  border-radius: 0.7rem;
+  box-shadow: 4px 4px 16px -8px rgba(0, 0, 0, 0.5);
+}
+
+.followButton:hover {
+  cursor: pointer;
+  background-color: rgb(56, 112, 158);
+  color: #fff;
 }
 
 .avatar {
