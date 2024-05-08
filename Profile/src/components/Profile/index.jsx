@@ -1,13 +1,9 @@
+import { useState } from "react";
 import ButtonLinks from "../ButtonLinks";
 import Title from "../Title";
 import ProfileSection from "./ProfileSection";
 import styles from "./styles.module.css";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
-
-function handleClick(ev) {
-  console.log(ev);
-  alert("Você agora está seguindo!");
-}
 
 export default function Profile({
   avatar,
@@ -19,11 +15,18 @@ export default function Profile({
   linkedinUrl,
   instaUrl,
 }) {
+  const [seguirText, setSeguirText] = useState("Seguir");
+
+  function handleClick(ev) {
+    alert("Você agora está seguindo!");
+    setSeguirText("Seguindo");
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.buttonFollowHeader}>
         <button className={styles.followButton} onClick={handleClick}>
-          Seguir
+          {seguirText}
         </button>
       </div>
 
