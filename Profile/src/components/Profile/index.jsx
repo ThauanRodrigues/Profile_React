@@ -18,14 +18,24 @@ export default function Profile({
   const [seguirText, setSeguirText] = useState("Seguir");
 
   function handleClick(ev) {
-    alert("Você agora está seguindo!");
-    setSeguirText("Seguindo");
+    if (seguirText === "Seguir") {
+      alert("Você agora está seguindo!");
+      setSeguirText("Seguindo");
+    } else {
+      alert("Você parou de seguir!");
+      setSeguirText("Seguir");
+    }
   }
 
   return (
     <div className={styles.container}>
       <div className={styles.buttonFollowHeader}>
-        <button className={styles.followButton} onClick={handleClick}>
+        <button
+          className={`${styles.followButton} ${
+            seguirText === "Seguindo" ? styles.following : ""
+          }`}
+          onClick={handleClick}
+        >
           {seguirText}
         </button>
       </div>

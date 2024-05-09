@@ -23,6 +23,10 @@
   background-color: rgb(56, 112, 158);
   color: #fff;
 }
+.following {
+  background-color: rgb(56, 112, 158);
+  color: #fff;
+}
 
 .avatar {
   max-width: 30%;
