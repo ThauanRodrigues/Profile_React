@@ -8,8 +8,8 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 # Como usar:
-  1 - Baixe o arquivo
-  2 - abra no VsCode e vai no terminal
-  3 - Instale as dependências "npm install"
-  4 - Agora inicie o projeto com "npm run dev"
+   - Baixe o arquivo
+   - abra no VsCode e vai no terminal
+   - Instale as dependências "npm install"
+   - Agora inicie o projeto com "npm run dev"
   
